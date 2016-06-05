@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="bastionApp">
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <meta name="description" content="A webapplication about Jeugdhuis 't Bastion">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jeugdhuis 't Bastion</title>
+    <link rel="icon" type="image/png" href="img/favicon.ico"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" >
+
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/activiteiten.css" rel="stylesheet">
+    <link href="css/fotos.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
+
+    <link href="vendors/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="vendors/animate/animate.css" rel="stylesheet">
+
+    <script src="vendors/jquery/jquery-2.1.1.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendors/angularJS/angular.js"></script>
+    <script src="vendors/angularJS/angular-route.js"></script>
+    <script src="vendors/angularJS/angular-animate.js"></script>
+    <script src="vendors/bootstrap/js/ui-bootstrap-0.13.0.min.js"></script>
+
+</head>
+<body ng-controller="indexController as indexModel">
+
+<div id="wrapper" class="animated fadeIn">
+    <header id="header">
+        <a id="logo" href="#">
+            <img class="animated flipInY" src="./img/logo.png" alt="Jeugdhuis 't Bastion">
+        </a>
+
+        <nav id="menu">
+            <ul class="horizontal-menu">
+                <li><a ng-class="{active: indexModel.isActivePage('home')}" ng-href="{{indexModel.goToHome()}}">Home</a></li>
+                <li><a ng-class="{active: indexModel.isActivePage('werking')}" ng-href="{{indexModel.goToWerking()}}">Werking</a></li>
+                <li><a ng-class="{active: indexModel.isActivePage('lidWorden')}" ng-href="{{indexModel.goToLidWorden()}}">Lid worden</a></li>
+                <li><a ng-class="{active: indexModel.isActivePage('activiteiten')}" ng-href="{{indexModel.goToActiviteiten()}}">Activiteiten</a></li>
+                <li><a ng-class="{active: indexModel.isActivePage('fotos')}" ng-href="{{indexModel.goToFotos()}}">Foto's</a></li>
+                <li><a ng-class="{active: indexModel.isActivePage('gastenboek')}" ng-href="{{indexModel.goToGastenboek()}}">Gastenboek</a></li>
+                <li><a ng-class="{active: indexModel.isActivePage('contact')}" ng-href="{{indexModel.goToContact()}}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="clear"></div>
+    <div id="content">
+        <div class="container">
+            <div ng-view></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/controllers/indexController.js"></script>
+<script src="js/controllers/homeController.js"></script>
+<script src="js/controllers/werkingController.js"></script>
+<script src="js/controllers/lidWordenController.js"></script>
+<script src="js/controllers/activiteitenController.js"></script>
+<script src="js/controllers/fotosController.js"></script>
+<script src="js/controllers/eventFotosController.js"></script>
+<script src="js/controllers/gastenboekController.js"></script>
+<script src="js/controllers/contactController.js"></script>
+
+<script src="js/providers/urlProvider.js"></script>
+
+<script src="js/services/globalServices.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+.upcomingEvent {
+    width: 200px;
+    margin-top: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+    display: inline-block;
+}
+
+.upcomingEventTitle {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.upcomingEventImage {
+    height: 200px;
+    width: 200px;
+    margin-top: 5px;
+
+    -webkit-box-shadow: 0 0 20px 0 rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 0 0 20px 0 rgba(50, 50, 50, 0.5);
+    -o-box-shadow: 0 0 20px 0 rgba(50, 50, 50, 0.5);
+    box-shadow: 0 0 20px 0 rgba(50, 50, 50, 0.5);
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.upcomingEventDate {
+    font-size: 15px;
+    word-spacing: -7px;
+    margin-top: 10px;
+    color: #9b8a76;
+
+    text-align: left;
+
+    width: 170px;
+    height: 20px;
+}
+
+.facebook-sign {
+    display: inline-block;
+    background-image: url("../img/facebook.png");
+    margin-top: 10px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.facebook-sign:hover {
+    background-image: url("../img/facebook-hover.png");
+}
+
+@media all and (max-width: 950px) {
+    #upcomingEvents {
+        text-align: center;
+    }
+
+    .upcomingEventDate {
+        text-align: left;
+    }
+}

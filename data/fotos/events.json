@@ -1,0 +1,20 @@
+{
+  "events": [
+    {
+      "id": "beerpong2016",
+      "title": "Beerpong 2016",
+      "date": "04/01/2016",
+      "front_image" : "front.jpg"
+    }, {
+      "id": "blacklight2016",
+      "title": "Blacklight Volleybal 2016",
+      "date": "05/06/2016",
+      "front_image" : "front.png"
+    }, {
+      "id": "blackbird2015",
+      "title": "Blackbird 2015",
+      "date": "09/03/2015",
+      "front_image" : "front.jpg"
+    }
+  ]
+}

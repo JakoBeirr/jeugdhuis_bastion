@@ -1,0 +1,32 @@
+<h4 id="fotoDetailsEventTitle" ng-bind="eventFotosModel.eventTitle"></h4>
+<div id="images">
+    <a class="eventImage" ng-repeat="image in eventFotosModel.eventImages" ng-click="eventFotosModel.showImageDetails($index)">
+        <div class="eventImageWidth imageImage">
+            <img ng-if="image.name" class="image" ng-src="{{'data/fotos/' + eventFotosModel.eventId + '/' + image.name}}" alt="foto" onerror="this.src='img/default-image.jpg'">
+            <img ng-if="!image.name" class="image" src="img/default-image.jpg" alt="foto">
+        </div>
+        <div class="clear"></div>
+        <span class="eventImageWidth imageName" ng-bind="image.name"></span>
+    </a>
+</div>
+
+<div class="modal" id="imageDetailModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body" id="imageDetailModalBody">
+                <button type="button" id="imageDetailClose" class="close" aria-label="Close" ng-click="eventFotosModel.hideModal()"><span aria-hidden="true">&times;</span></button>
+                <img class="imageDetailImage" ng-if="eventFotosModel.imageDetailName" ng-src="{{'data/fotos/' + eventFotosModel.eventId + '/' + eventFotosModel.imageDetailName}}" alt="foto" onerror="this.src='img/default-image.jpg'">
+                <img class="imageDetailImage" ng-if="!eventFotosModel.imageDetailName" src="img/default-image.jpg" alt="foto">
+
+                <a class="left carousel-control" role="button" style="position:absolute; top: 40px; cursor: pointer;" ng-click="eventFotosModel.lowerIndex()">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" role="button" style="position:absolute; top: 40px; cursor: pointer;" ng-click="eventFotosModel.higherIndex()">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
