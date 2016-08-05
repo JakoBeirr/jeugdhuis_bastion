@@ -1,23 +1,23 @@
-(function (){
+(function() {
     'use strict';
 
     angular.module('controllers').controller('contactController', ['menuFactory',
-        function (menuFactory) {
+        function(menuFactory) {
             var contactModel = this;
 
             menuFactory.setActivePage('contact');
 
-            initialize ();
+            initialize();
 
             /**
              * Helper functions
              */
 
-            function initialize () {
+            function initialize() {
                 hideModalBackdrop();
             }
 
-            function hideModalBackdrop () {
+            function hideModalBackdrop() {
                 $('.modal-backdrop').remove();
             }
         }

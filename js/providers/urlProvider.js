@@ -1,7 +1,7 @@
-(function (){
+(function() {
     'use strict';
 
-    angular.module('providers', []).provider('urlFactory', function () {
+    angular.module('providers', []).provider('urlFactory', function() {
         var baseUrl = "jeugdhuis_bastion";
 
         var homeUrl = '/home';
@@ -13,69 +13,69 @@
         var gastenboekUrl = '/gastenboek';
         var contactUrl = '/contact';
 
-        this.getHomeUrl = function () {
+        this.getHomeUrl = function() {
             return homeUrl;
         };
 
-        this.getWerkingUrl = function () {
+        this.getWerkingUrl = function() {
             return werkingUrl;
         };
 
-        this.getLidWordenUrl = function () {
+        this.getLidWordenUrl = function() {
             return lidWordenUrl;
         };
 
-        this.getActiviteitenUrl = function () {
+        this.getActiviteitenUrl = function() {
             return activiteitenUrl;
         };
 
-        this.getFotosUrl = function () {
+        this.getFotosUrl = function() {
             return fotosUrl;
         };
 
-        this.getEventFotosUrl = function () {
+        this.getEventFotosUrl = function() {
             return eventFotosUrl;
         };
 
-        this.getGastenboekUrl = function () {
+        this.getGastenboekUrl = function() {
             return gastenboekUrl;
         };
 
-        this.getContactUrl = function () {
+        this.getContactUrl = function() {
             return contactUrl;
         };
 
-        this.$get = function ($window) {
+        this.$get = function($window) {
             baseUrl = $window.location.origin + "/";
 
             return {
-                getHomeUrl: function () {
+                getHomeUrl: function() {
                     return "#" + homeUrl;
                 },
-                getWerkingUrl: function () {
+                getWerkingUrl: function() {
                     return "#" + werkingUrl;
                 },
-                getLidWordenUrl: function () {
+                getLidWordenUrl: function() {
                     return "#" + lidWordenUrl;
                 },
-                getActiviteitenUrl: function () {
+                getActiviteitenUrl: function() {
                     return "#" + activiteitenUrl;
                 },
-                getFotosUrl: function () {
+                getFotosUrl: function() {
                     return "#" + fotosUrl;
                 },
-                getEventFotosUrl: function (eventId) {
+                getEventFotosUrl: function(eventId) {
                     var url = "#" + eventFotosUrl;
                     url = url.replace(":eventId", eventId);
                     return url;
                 },
-                getGastenboekUrl: function () {
+                getGastenboekUrl: function() {
                     return "#" + gastenboekUrl;
                 },
-                getContactUrl: function () {
+                getContactUrl: function() {
                     return "#" + contactUrl;
                 }
-            }
-        }
+            };
+        };
     });
 })();

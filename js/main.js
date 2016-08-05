@@ -1,10 +1,10 @@
-(function (){
+(function() {
     'use strict';
 
     var bastionApp = angular.module('bastionApp', ['ngRoute', 'ngAnimate', 'providers', 'services', 'controllers', 'ui.bootstrap']);
 
     bastionApp.config(['$routeProvider', 'urlFactoryProvider',
-        function ($routeProvider, urlFactoryProvider) {
+        function($routeProvider, urlFactoryProvider) {
             $routeProvider.when(urlFactoryProvider.getHomeUrl(), {
                 templateUrl: 'templates/home.html',
                 controller: 'homeController',

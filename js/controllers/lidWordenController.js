@@ -1,23 +1,23 @@
-(function (){
+(function() {
     'use strict';
 
     angular.module('controllers').controller('lidWordenController', ['menuFactory',
-        function (menuFactory) {
+        function(menuFactory) {
             var lidWordenModel = this;
 
             menuFactory.setActivePage('lidWorden');
 
-            initialize ();
+            initialize();
 
             /**
              * Helper functions
              */
 
-            function initialize () {
+            function initialize() {
                 hideModalBackdrop();
             }
 
-            function hideModalBackdrop () {
+            function hideModalBackdrop() {
                 $('.modal-backdrop').remove();
             }
         }

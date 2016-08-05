@@ -1,23 +1,23 @@
-(function (){
+(function() {
     'use strict';
 
     angular.module('controllers').controller('werkingController', ['menuFactory',
-        function (menuFactory) {
+        function(menuFactory) {
             var werkingModel = this;
 
             menuFactory.setActivePage('werking');
 
-            initialize ();
+            initialize();
 
             /**
              * Helper functions
              */
 
-            function initialize () {
+            function initialize() {
                 hideModalBackdrop();
             }
 
-            function hideModalBackdrop () {
+            function hideModalBackdrop() {
                 $('.modal-backdrop').remove();
             }
         }

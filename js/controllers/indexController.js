@@ -1,45 +1,45 @@
-(function (){
+(function() {
     'use strict';
 
     angular.module('controllers', []).controller('indexController', ['urlFactory', 'menuFactory',
-        function (urlFactory, menuFactory) {
+        function(urlFactory, menuFactory) {
             var indexModel = this;
 
-            initialize ();
+            initialize();
 
             /**
              * Model functions
              */
 
-            indexModel.goToHome = function () {
+            indexModel.goToHome = function() {
                 return urlFactory.getHomeUrl();
             };
 
-            indexModel.goToWerking = function () {
+            indexModel.goToWerking = function() {
                 return urlFactory.getWerkingUrl();
             };
 
-            indexModel.goToLidWorden = function () {
+            indexModel.goToLidWorden = function() {
                 return urlFactory.getLidWordenUrl();
             };
 
-            indexModel.goToActiviteiten = function () {
+            indexModel.goToActiviteiten = function() {
                 return urlFactory.getActiviteitenUrl();
             };
 
-            indexModel.goToFotos = function () {
+            indexModel.goToFotos = function() {
                 return urlFactory.getFotosUrl();
             };
 
-            indexModel.goToGastenboek = function () {
+            indexModel.goToGastenboek = function() {
                 return urlFactory.getGastenboekUrl();
             };
 
-            indexModel.goToContact = function () {
+            indexModel.goToContact = function() {
                 return urlFactory.getContactUrl();
             };
 
-            indexModel.isActivePage = function (page) {
+            indexModel.isActivePage = function(page) {
                 return menuFactory.isActivePage(page);
             };
 
@@ -47,11 +47,11 @@
              * Helper functions
              */
 
-            function initialize () {
+            function initialize() {
                 hideModalBackdrop();
             }
 
-            function hideModalBackdrop () {
+            function hideModalBackdrop() {
                 $('.modal-backdrop').remove();
             }
         }

@@ -1,23 +1,23 @@
-(function (){
+(function() {
     'use strict';
 
     angular.module('controllers').controller('homeController', ['$http', 'menuFactory',
-        function ($http, menuFactory) {
+        function($http, menuFactory) {
             var homeModel = this;
 
             menuFactory.setActivePage('home');
 
-            initialize ();
+            initialize();
 
             /**
              * Helper functions
              */
 
-            function initialize () {
+            function initialize() {
                 hideModalBackdrop();
             }
 
-            function hideModalBackdrop () {
+            function hideModalBackdrop() {
                 $('.modal-backdrop').remove();
             }
         }

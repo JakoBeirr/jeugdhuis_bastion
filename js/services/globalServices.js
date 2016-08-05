@@ -1,18 +1,19 @@
-(function (){
+(function() {
     'use strict';
 
-    angular.module('services', []).factory('menuFactory', function () {
+    angular.module('services', []).factory('menuFactory', function() {
         var activePage = 'home';
+        var testtesttesttest = 'test';
 
         return {
-            isActivePage: function (page) {
+            isActivePage: function(page) {
                 return activePage === page;
             },
-            setActivePage: function (page) {
+            setActivePage: function(page) {
                 activePage = page;
             }
-        }
-    }).factory('dateFactory', function () {
+        };
+    }).factory('dateFactory', function() {
         var monthNames = [
             "Januari", "Februari", "Maart",
             "April", "Mei", "Juni", "Juli",
@@ -21,7 +22,7 @@
         ];
 
         return {
-            parseDateToLongFormat: function (dateString) {
+            parseDateToLongFormat: function(dateString) {
                 var date = new Date(dateString);
 
                 var day = date.getDate();
@@ -30,6 +31,6 @@
 
                 return day + ' ' + monthNames[monthIndex] + ' ' + year;
             }
-        }
+        };
     });
 })();
