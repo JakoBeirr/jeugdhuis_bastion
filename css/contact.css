@@ -1,41 +1,47 @@
-#contactGegevens {
+#contactGegevens
+{
+    float: left;
+
     width: 50%;
     margin-top: 30px;
-
-    float: left;
 }
 
-#contactGegevens h3 {
+#contactGegevens h3
+{
     font-variant: small-caps;
 }
 
-#map {
-    width:50%;
-    height:400px;
-    margin-top: 30px;
-    overflow:hidden;
-
+#map
+{
     float: right;
+    overflow: hidden;
 
-    -webkit-box-shadow: 0 0 20px 0 rgba(50, 50, 50, 0.25);
-    -moz-box-shadow: 0 0 20px 0 rgba(50, 50, 50, 0.25);
-    -o-box-shadow: 0 0 20px 0 rgba(50, 50, 50, 0.25);
-    box-shadow: 0 0 20px 0 rgba(50, 50, 50, 0.25);
+    width: 50%;
+    height: 400px;
+    margin-top: 30px;
 
-    border: solid thin rgba(50, 50, 50, 0.25);
-
+    border: solid thin rgba(50, 50, 50, .25);
     -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-box-shadow: 0 0 20px 0 rgba(50, 50, 50, .25);
+       -moz-box-shadow: 0 0 20px 0 rgba(50, 50, 50, .25);
+            box-shadow: 0 0 20px 0 rgba(50, 50, 50, .25);
+
+         -o-box-shadow: 0 0 20px 0 rgba(50, 50, 50, .25);
 }
 
-@media all and (max-width: 950px) {
-    #contactGegevens {
+@media all and (max-width: 950px)
+{
+    #contactGegevens
+    {
         width: 100%;
     }
 
-    #map {
-        width: 100%;
+    #map
+    {
         float: left;
+
+        width: 100%;
     }
 }

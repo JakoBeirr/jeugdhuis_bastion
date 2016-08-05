@@ -1,128 +1,138 @@
-html {
-    height: 100%;
+html
+{
     width: 100%;
+    height: 100%;
     margin: 0;
 }
-
-body {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+body
+{
     font-family: Roboto, sans-serif;
+    font-size: 1em;
     font-style: normal;
+    line-height: 1.4;
 
     min-width: 350px;
     height: 100%;
 
+    color: #222;
     background: url(../img/background-min.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
 }
-
-a{
+a
+{
     outline: medium none !important;
 }
-
-#wrapper {
+#wrapper
+{
     width: 90%;
     max-width: 1100px;
-    margin: auto;
-
     height: auto !important;
     min-height: 100%;
+    margin: auto;
 }
-
-#header {
-    margin-top: 30px;
+#header
+{
     height: 140px;
+    margin-top: 30px;
 }
-
-#logo {
+#logo
+{
     float: left;
+
     width: 20%;
 }
-
-#menu {
-    float: right;
-    position: relative;
-    margin-top: 100px;
-    width: 80%;
-
-    font-variant: small-caps;
+#menu
+{
     font-weight: 600;
-}
+    font-variant: small-caps;
 
-.horizontal-menu {
-    padding: 0;
+    position: relative;
+
+    float: right;
+
+    width: 80%;
+    margin-top: 100px;
+}
+.horizontal-menu
+{
     margin-bottom: 0;
+    padding: 0;
+
     list-style-type: none;
+
     text-align: right;
 }
-
-.horizontal-menu li {
+.horizontal-menu li
+{
     display: inline-block;
 }
-
-.horizontal-menu li a {
+.horizontal-menu li a
+{
     font-size: 15px;
     font-weight: bolder;
     line-height: 20px;
-    color: #5c3219;
-    text-decoration: none;
+
     padding: 5px 5px;
-}
 
-.horizontal-menu li a:hover {
+    text-decoration: none;
+
+    color: #5c3219;
+}
+.horizontal-menu li a:hover
+{
     border-bottom: solid #5c3219;
 }
-
-.horizontal-menu li .active {
+.horizontal-menu li .active
+{
     border-bottom: solid #5c3219;
 }
-
-.clear {
+.clear
+{
     clear: both;
 }
-
-#content {
-    background-color: rgba(233, 209, 175, 0.85);
-    color: #5f5449;
-    padding: 20px;
+#content
+{
     margin-top: 20px;
     margin-bottom: 30px;
+    padding: 20px;
 
+    color: #5f5449;
     -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+    background-color: rgba(233, 209, 175, .85);
+    -webkit-box-shadow: 0 0 12px 0 rgba(50, 50, 50, .25);
+       -moz-box-shadow: 0 0 12px 0 rgba(50, 50, 50, .25);
+            box-shadow: 0 0 12px 0 rgba(50, 50, 50, .25);
 
-    -webkit-box-shadow: 0 0 12px 0 rgba(50, 50, 50, 0.25);
-    -moz-box-shadow: 0 0 12px 0 rgba(50, 50, 50, 0.25);
-    -o-box-shadow: 0 0 12px 0 rgba(50, 50, 50, 0.25);
-    box-shadow: 0 0 12px 0 rgba(50, 50, 50, 0.25);
+         -o-box-shadow: 0 0 12px 0 rgba(50, 50, 50, .25);
 }
-
-@media all and (max-width: 950px) {
-    #header {
+@media all and (max-width: 950px)
+{
+    #header
+    {
         text-align: center;
     }
-
-    #logo {
+    #logo
+    {
         float: none;
+
         width: 100%;
     }
-
-    #menu {
+    #menu
+    {
+        width: 100%;
         margin-top: 0;
-        width: 100%;
     }
-
-    .horizontal-menu {
+    .horizontal-menu
+    {
         text-align: center;
     }
-
-    .horizontal-menu li {
+    .horizontal-menu li
+    {
         margin-top: 10px;
     }
 }
