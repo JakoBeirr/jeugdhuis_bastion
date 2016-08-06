@@ -5,10 +5,20 @@
         <br>
         <p>
             <strong>E-mailadres:</strong>
-            jeugdhuisbrecht@gmail.com</p>
+            jeugdhuisbrecht@gmail.com
+        </p>
         <p>
             <strong>Adres:</strong>
-            Ambachtslaan 10, 2960 Brecht</p>
+            Ambachtslaan 10, 2960 Brecht
+        </p>
+
+        <div class="form-group" style="width: 90%;">
+          <input type="text" class="form-control" ng-model="contactModel.mailModel.email" placeholder="email" style="margin: 5px" />
+          <input type="text" class="form-control" ng-model="contactModel.mailModel.subject" placeholder="subject" style="margin: 5px" />
+          <textarea type="text" class="form-control" rows="5" ng-model="contactModel.mailModel.message" placeholder="message" style="margin: 5px" />
+
+          <button type="button" class="btn btn-primary" ng-click="contactModel.sendMail()" style="float: right;">Verstuur</button>
+        </div>
     </div>
 
     <div id="map"></div>
