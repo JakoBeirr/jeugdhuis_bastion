@@ -15,7 +15,9 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body" id="imageDetailModalBody">
-                <button type="button" id="imageDetailClose" class="close" aria-label="Close" ng-click="eventFotosModel.hideModal()"><span aria-hidden="true">&times;</span></button>
+                <button type="button" id="imageDetailClose" class="close" aria-label="Close" ng-click="eventFotosModel.hideModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
                 <img class="imageDetailImage" ng-if="eventFotosModel.imageDetailName" ng-src="{{'data/fotos/' + eventFotosModel.eventId + '/' + eventFotosModel.imageDetailName}}" alt="foto" onerror="this.src='img/default-image.jpg'">
                 <img class="imageDetailImage" ng-if="!eventFotosModel.imageDetailName" src="img/default-image.jpg" alt="foto">
 

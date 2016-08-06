@@ -3,8 +3,12 @@
     <div id="contactGegevens">
         <h3>Contactgegevens</h3>
         <br>
-        <p><strong>E-mailadres:</strong> jeugdhuisbrecht@gmail.com</p>
-        <p><strong>Adres:</strong> Ambachtslaan 10, 2960 Brecht</p>
+        <p>
+            <strong>E-mailadres:</strong>
+            jeugdhuisbrecht@gmail.com</p>
+        <p>
+            <strong>Adres:</strong>
+            Ambachtslaan 10, 2960 Brecht</p>
     </div>
 
     <div id="map"></div>
@@ -21,15 +25,9 @@
                 center: myLatLng
             });
 
-            var infowindow = new google.maps.InfoWindow({
-                content: '<p><strong>Jeugdhuis \'t Bastion,</strong></p><p style="line-height: 5px;">Brechts jeugdhuis waar het voor de jongeren</p><p style="line-height: 5px;">van Brecht en omstreken gezellig vertoeven is.</p>'
-            });
+            var infowindow = new google.maps.InfoWindow({content: '<p><strong>Jeugdhuis \'t Bastion,</strong></p><p style="line-height: 5px;">Brechts jeugdhuis waar het voor de jongeren</p><p style="line-height: 5px;">van Brecht en omstreken gezellig vertoeven is.</p>'});
 
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                title: 'Jeugdhuis \'t Bastion'
-            });
+            var marker = new google.maps.Marker({position: myLatLng, map: map, title: 'Jeugdhuis \'t Bastion'});
 
             marker.addListener('click', function() {
                 infowindow.open(map, marker);
