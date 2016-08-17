@@ -1,0 +1,124 @@
+.container
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.carousel-control
+{
+    width: 0;
+}
+
+.carousel-control.left,
+.carousel-control.right
+{
+    opacity: 1;
+    background-image: none;
+    background-repeat: no-repeat;
+    text-shadow: none;
+
+    filter: alpha(opacity=100);
+}
+
+.carousel-control.left span
+{
+    padding: 15px;
+}
+
+.carousel-control.right span
+{
+    padding: 15px;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-prev,
+.carousel-control .icon-next
+{
+    position: absolute;
+    z-index: 5;
+    top: 45%;
+
+    display: inline-block;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .icon-prev
+{
+    left: 0;
+}
+
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-next
+{
+    right: 0;
+}
+
+.carousel-control.left span:hover,
+.carousel-control.right span:hover
+{
+    opacity: .7;
+
+    filter: alpha(opacity=70);
+}
+
+.header-text
+{
+    position: absolute;
+    top: 45%;
+    right: auto;
+    left: 1.8%;
+
+    width: 90%;
+}
+
+.header-text h2
+{
+    font-size: 30px;
+
+    color: rgba(25,25,25,.75);
+}
+
+.header-text h3
+{
+    font-size: 20px;
+
+    color: rgba(255,255,255,.75);
+}
+
+.header-text h2 span
+{
+    padding: 5px 10px 5px 10px;
+
+    background-color: rgba(255,255,255,.75);
+}
+
+.header-text h3 span
+{
+    padding: 5px 10px 5px 10px;
+
+    background-color: rgba(25,25,25,.75);
+}
+
+.btn-min-block
+{
+    line-height: 26px;
+
+    min-width: 170px;
+}
+
+.btn-theme
+{
+    margin-right: 15px;
+
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: transparent;
+}
+
+.btn-theme:hover
+{
+    color: #000;
+    border-color: #fff;
+    background-color: #fff;
+}

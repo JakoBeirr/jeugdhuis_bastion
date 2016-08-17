@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <div id="events">
+    <h4 class="pageTitle">Foto's</h4>
+
     <div class="event" ng-repeat="event in fotosModel.events">
         <a ng-href="{{fotosModel.goToEvent(event.id)}}">
             <div class="eventWidth eventFrontImage">
@@ -9,7 +11,7 @@
             <div class="clear"></div>
             <span class="eventWidth eventTitle" ng-bind="event.title"></span>
             <div class="clear"></div>
-            <span class="eventDate">
+            <span class="eventDate" ng-if="fotosModel.getDate(event.date)">
                 <span class="glyphicon glyphicon-calendar" aria-hidden="true">
                     <span ng-bind="fotosModel.getDate(event.date)"></span>
                 </span>

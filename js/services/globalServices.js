@@ -25,11 +25,15 @@
             parseDateToLongFormat: function(dateString) {
                 var date = new Date(dateString);
 
-                var day = date.getDate();
-                var monthIndex = date.getMonth();
-                var year = date.getFullYear();
+                if (!!date.getDate()) {
+                    var day = date.getDate();
+                    var monthIndex = date.getMonth();
+                    var year = date.getFullYear();
 
-                return day + ' ' + monthNames[monthIndex] + ' ' + year;
+                    return day + ' ' + monthNames[monthIndex] + ' ' + year;
+                } else {
+                    return undefined;
+                }
             }
         };
     });

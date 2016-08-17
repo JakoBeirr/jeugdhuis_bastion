@@ -3,12 +3,7 @@
     float: left;
 
     width: 50%;
-    margin-top: 30px;
-}
-
-#contactGegevens h3
-{
-    font-variant: small-caps;
+    margin-top: 20px;
 }
 
 #map
@@ -18,7 +13,7 @@
 
     width: 50%;
     height: 400px;
-    margin-top: 30px;
+    margin-top: 20px;
 
     border: solid thin rgba(50, 50, 50, .25);
     -webkit-border-radius: 5px;

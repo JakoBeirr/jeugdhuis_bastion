@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <div id="upcomingEvents">
+    <h4 class="pageTitle">Evenementen</h4>
+
     <div class="upcomingEvent" ng-repeat="upcomingEvent in activiteitenModel.upcomingEvents">
         <span class="upcomingEventTitle" ng-bind="upcomingEvent.title"></span>
         <div class="clear"></div>
         <div><img ng-if="upcomingEvent.image" class="upcomingEventImage" ng-src="{{'data/activiteiten/frontimages/' + upcomingEvent.image}}" alt="Voorbeeld foto" onerror="this.src='img/default-image.jpg'"><img ng-if="!upcomingEvent.image" class="upcomingEventImage" src="img/default-image.jpg" alt="Voorbeeld foto"></div>
         <div class="clear"></div>
-        <span class="upcomingEventDate glyphicon glyphicon-calendar" aria-hidden="true">
-            <span ng-bind="activiteitenModel.getDate(upcomingEvent.date)"></span>
-        </span>
-        <a ng-if="upcomingEvent.facebook" ng-href="{{upcomingEvent.facebook}}">
-            <span class="facebook-sign"></span>
-        </a>
+        <p>
+            <span ng-if="activiteitenModel.getDate(upcomingEvent.date)" class="upcomingEventInfo glyphicon glyphicon-calendar" aria-hidden="true">
+                <span ng-bind="activiteitenModel.getDate(upcomingEvent.date)"></span>
+            </span>
+            <a ng-if="upcomingEvent.facebook" ng-href="{{upcomingEvent.facebook}}">
+                <span class="facebook-sign"></span>
+            </a>
+        </p>
+        <p class="upcomingEventInfo">
+            <span ng-if="upcomingEvent.location" class="glyphicon glyphicon-map-marker" aria-hidden="true">
+                <span ng-bind="upcomingEvent.location"></span>
+            </span>
+        </p>
     </div>
 </div>

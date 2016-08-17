@@ -3,9 +3,10 @@
     display: inline-block;
 
     width: 200px;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-right: 25px;
     margin-left: 25px;
+    vertical-align: text-top;
 }
 
 .upcomingEventTitle
@@ -31,7 +32,7 @@
          -o-box-shadow: 0 0 20px 0 rgba(50, 50, 50, .5);
 }
 
-.upcomingEventDate
+.upcomingEventInfo
 {
     font-size: 15px;
 

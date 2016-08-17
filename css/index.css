@@ -110,6 +110,15 @@ a
 
          -o-box-shadow: 0 0 12px 0 rgba(50, 50, 50, .25);
 }
+.pageTitle
+{
+    font-variant: small-caps;
+
+    padding: 5px;
+
+    border-bottom: solid thin #5f5449;
+}
+
 @media all and (max-width: 950px)
 {
     #header

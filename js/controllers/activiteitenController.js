@@ -32,17 +32,26 @@
                     cache: true
                 }).success(function(result) {
                     activiteitenModel.upcomingEvents = [];
+                    var eventsWithoutDate = [];
 
                     for (var i = 0; i < result.upcomingevents.length; i++) {
                         var eventDate = new Date(result.upcomingevents[i].date).setHours(0, 0, 0, 0);
                         var today = new Date().setHours(0, 0, 0, 0);
 
-                        if (eventDate >= today) {
-                            activiteitenModel.upcomingEvents.push(result.upcomingevents[i]);
+                        if (!!eventDate) {
+                            if (eventDate >= today) {
+                                activiteitenModel.upcomingEvents.push(result.upcomingevents[i]);
+                            }
+                        } else {
+                            eventsWithoutDate.push(result.upcomingevents[i]);
                         }
                     }
 
                     sortUpcomingEventsByDate(activiteitenModel.upcomingEvents);
+
+                    for (var j = 0; j < eventsWithoutDate.length; j++) {
+                        activiteitenModel.upcomingEvents.push(eventsWithoutDate[j]);
+                    }
                 });
             }
 
