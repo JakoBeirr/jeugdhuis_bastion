@@ -23,14 +23,18 @@
 
         return {
             parseDateToLongFormat: function(dateString) {
-                var date = new Date(dateString);
+              if (!!dateString) {
+                    var dateParts = dateString.split("/");
 
-                if (!!date.getDate()) {
-                    var day = date.getDate();
-                    var monthIndex = date.getMonth();
-                    var year = date.getFullYear();
-
-                    return day + ' ' + monthNames[monthIndex] + ' ' + year;
+                    if (dateParts.length == 1) {
+                      return dateParts[0];
+                    } else if (dateParts.length == 2) {
+                      return monthNames[dateParts[0]-1] + ' ' + dateParts[1];
+                    } else if (dateParts.length == 3) {
+                      return dateParts[1] + ' ' + monthNames[dateParts[0]-1] + ' ' + dateParts[2];
+                    } else {
+                      return undefined;
+                    }
                 } else {
                     return undefined;
                 }

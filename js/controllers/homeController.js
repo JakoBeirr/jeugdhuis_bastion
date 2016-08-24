@@ -14,7 +14,17 @@
              */
 
             function initialize() {
+                getNewsFeed();
+
                 hideModalBackdrop();
+            }
+
+            function getNewsFeed() {
+              $http.get("data/newsfeed/newsfeed.json", {
+                  cache: true
+              }).success(function(result) {
+                  homeModel.newsFeed = result.newsFeed;
+              });
             }
 
             function hideModalBackdrop() {

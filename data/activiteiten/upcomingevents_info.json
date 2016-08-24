@@ -1,0 +1,11 @@
+{
+  "upcomingevents": [
+    {
+      "title": "Naam van evenement",
+      "image": "Naam.extensie van front foto, te vinden in frontimages folder",
+      "date": "maand/dag/jaar",
+      "facebook": "URL naar facebook evenement (niet verplicht)",
+      "location": "Locatie (niet verplicht)"
+    }
+  ]
+}

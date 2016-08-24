@@ -26,11 +26,23 @@
          -o-box-shadow: 0 0 20px 0 rgba(50, 50, 50, .25);
 }
 
+.contactForm
+{
+    width: 90%;
+    margin-top: 35px;
+}
+
 @media all and (max-width: 950px)
 {
     #contactGegevens
     {
         width: 100%;
+    }
+
+    .contactForm
+    {
+        width: 100%;
+        margin-top: 15px;
     }
 
     #map
