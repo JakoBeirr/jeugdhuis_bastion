@@ -3,8 +3,8 @@
     <h4 class="pageTitle">Jeugdhuis 't Bastion</h4>
 
     <div id="newsFeedCarrousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#newsFeedCarrousel" ng-repeat="news in homeModel.newsFeed" ng-class="{active : $first}" data-slide-to="{{$index}}"></li>
+        <ol class="carousel-indicators" style="bottom: 5px;">
+            <li data-target="#newsFeedCarrousel" ng-repeat="news in homeModel.newsFeed" ng-class="{active : $first}" data-slide-to="{{$index}}" style="border: 1px solid #000;"></li>
         </ol>
 
         <div class="carousel-inner" role="listbox">
