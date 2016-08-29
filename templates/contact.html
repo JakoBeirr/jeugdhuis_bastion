@@ -11,17 +11,14 @@
             <strong>Adres:</strong>
             Ambachtslaan 10, 2960 Brecht
         </p>
-
-        <form action="mailto:jeugdhuisbrecht@gmail.com" method="post" enctype="text/plain" class="form-group contactForm">
+        <div class="form-group contactForm">
             <strong>Contacteer ons</strong>
 
-            <input type="text" class="form-control" placeholder="Naam" name="name" style="margin: 5px 0px 5px 0px"/>
-            <input type="text" class="form-control" placeholder="E-mail" name="mail" style="margin: 5px 0px 5px 0px"/>
-            <input type="text" class="form-control" placeholder="Onderwerp" name="subject" style="margin: 5px 0px 5px 0px"/>
-            <textarea type="text" class="form-control" rows="5" placeholder="Bericht" name="comment" style="margin: 5px 0px 5px 0px"/>
+            <input type="text" class="form-control" ng-model="contactModel.mailForm.subject" placeholder="Onderwerp" name="subject" style="margin: 5px 0px 5px 0px"/>
+            <textarea type="text" class="form-control" rows="5" ng-model="contactModel.mailForm.message" placeholder="Bericht" name="comment" style="margin: 5px 0px 5px 0px"/>
 
-            <input type="submit" class="btn btn-primary" value="Verstuur" style="float: right;">
-        </form>
+            <button type="button" class="btn btn-primary" name="sendMailButton" ng-click="contactModel.sendMail()" style="float: right;">Verstuur</button>
+        </div>
     </div>
 
     <div id="map"></div>

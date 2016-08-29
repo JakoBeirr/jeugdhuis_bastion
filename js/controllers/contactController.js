@@ -14,7 +14,19 @@
              */
 
             contactModel.sendMail = function() {
-                $http.post('php/sendMail.php', JSON.stringify(contactModel.mailModel))
+                var subject = contactModel.mailForm.subject;
+                var body = contactModel.mailForm.message;
+                if (!!body) {
+                    body = body.replace('\n', '%0D%0A');
+                }
+
+                var a = document.createElement('a');
+                a.href = "mailto:jeugdhuisbrecht@gmail.com?subject=" + subject + "&body=" + body;
+                var clickEvent = document.createEvent("MouseEvents");
+                clickEvent.initEvent("click", true, true);
+                a.dispatchEvent(clickEvent);
+
+                /*$http.post('php/sendMail.php', JSON.stringify(contactModel.mailModel))
                     .success(
                         function(data) {
                             alert('Mail sent!');
@@ -22,7 +34,7 @@
                     .error(
                         function(data) {
                             alert('Unable to sent mail!');
-                        });
+                        });*/
             };
 
             /**
@@ -36,10 +48,9 @@
             }
 
             function createMailModel() {
-                contactModel.mailModel = {};
-                contactModel.mailModel.email = '';
-                contactModel.mailModel.subject = '';
-                contactModel.mailModel.message = '';
+                contactModel.mailForm = {};
+                contactModel.mailForm.subject = '';
+                contactModel.mailForm.message = '';
             }
 
             function hideModalBackdrop() {
