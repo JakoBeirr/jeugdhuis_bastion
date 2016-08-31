@@ -10,6 +10,7 @@
         var activiteitenUrl = '/activiteiten';
         var fotosUrl = '/fotos';
         var eventFotosUrl = '/fotos/:eventId';
+        var eventFotoUrl = '/fotos/:eventId/:fotoId';
         var gastenboekUrl = '/gastenboek';
         var contactUrl = '/contact';
 
@@ -35,6 +36,10 @@
 
         this.getEventFotosUrl = function() {
             return eventFotosUrl;
+        };
+
+        this.getEventFotoUrl = function() {
+            return eventFotoUrl;
         };
 
         this.getGastenboekUrl = function() {
@@ -67,6 +72,11 @@
                 getEventFotosUrl: function(eventId) {
                     var url = "#" + eventFotosUrl;
                     url = url.replace(":eventId", eventId);
+                    return url;
+                },
+                getEventFotoUrl: function(eventId, fotoId) {
+                    var url = "#" + eventFotoUrl;
+                    url = url.replace(":eventId", eventId).replace(":fotoId", fotoId);
                     return url;
                 },
                 getGastenboekUrl: function() {

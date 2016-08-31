@@ -1,8 +1,8 @@
 (function() {
     'use strict';
 
-    angular.module('controllers').controller('eventFotosController', ['$http', '$routeParams', 'menuFactory',
-        function($http, $routeParams, menuFactory) {
+    angular.module('controllers').controller('eventFotosController', ['$http', '$routeParams', 'menuFactory', 'urlFactory',
+        function($http, $routeParams, menuFactory, urlFactory) {
             var eventFotosModel = this;
 
             menuFactory.setActivePage('fotos');
@@ -64,7 +64,9 @@
 
             function showImage(imageIndex) {
                 activeImageIndex = imageIndex;
-                eventFotosModel.imageDetailName = eventFotosModel.eventImages[imageIndex].name;
+                eventFotosModel.selectedImage = {};
+                eventFotosModel.selectedImage.imageDetailName = eventFotosModel.eventImages[imageIndex].name;
+                eventFotosModel.selectedImage.imageUrl = window.location.origin + "/" + urlFactory.getEventFotoUrl(eventFotosModel.eventId, btoa(eventFotosModel.eventImages[imageIndex].name));
             }
 
             function showModal() {

@@ -19,8 +19,8 @@
                 <button type="button" id="imageDetailClose" class="close" aria-label="Close" ng-click="eventFotosModel.hideModal()">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <img class="imageDetailImage" ng-if="eventFotosModel.imageDetailName" ng-src="{{'data/fotos/' + eventFotosModel.eventId + '/' + eventFotosModel.imageDetailName}}" alt="foto" onerror="this.src='img/default-image.jpg'">
-                <img class="imageDetailImage" ng-if="!eventFotosModel.imageDetailName" src="img/default-image.jpg" alt="foto">
+                <img class="imageDetailImage" ng-if="eventFotosModel.selectedImage.imageDetailName" ng-src="{{'data/fotos/' + eventFotosModel.eventId + '/' + eventFotosModel.selectedImage.imageDetailName}}" alt="foto" onerror="this.src='img/default-image.jpg'">
+                <img class="imageDetailImage" ng-if="!eventFotosModel.selectedImage.imageDetailName" src="img/default-image.jpg" alt="foto">
 
                 <a class="left carousel-control" role="button" style="position:absolute; top: 40px; cursor: pointer;" ng-click="eventFotosModel.lowerIndex()">
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -31,6 +31,9 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
+        </div>
+        <div class="modal-footer" style="padding: 5px; margin-top: 1px; background-color: rgba(255, 255, 255, 0.95); border: 1px solid black; border-radius: 2.5px;">
+            <strong>Deelbare URL:</strong> <span ng-bind="eventFotosModel.selectedImage.imageUrl" style="color: rgb(50, 50, 175); text-decoration: underline;"></span>
         </div>
     </div>
 </div>

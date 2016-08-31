@@ -31,7 +31,7 @@ for /r %%f in (*.jpg, *.png, *.jpeg) do (
 for /r %%f in (*.jpg, *.png, *.jpeg) do (
 	@echo 		{ >> "%EVENT_FILE%"
 	@echo 			"name": "%%~nxf" >> "%EVENT_FILE%"
-	
+
 	echo %%~nxf added
 
 	if NOT "%%~nxf"=="%LAST_FILE%" (

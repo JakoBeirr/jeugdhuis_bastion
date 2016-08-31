@@ -29,6 +29,10 @@
                 templateUrl: 'templates/eventFotos.html',
                 controller: 'eventFotosController',
                 controllerAs: 'eventFotosModel'
+            }).when(urlFactoryProvider.getEventFotoUrl(), {
+                templateUrl: 'templates/eventFoto.html',
+                controller: 'eventFotoController',
+                controllerAs: 'eventFotoModel'
             }).when(urlFactoryProvider.getGastenboekUrl(), {
                 templateUrl: 'templates/gastenboek.html',
                 controller: 'gastenboekController',

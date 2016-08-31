@@ -117,6 +117,26 @@
 {
     width: 100%;
 }
+.eventFoto
+{
+    margin-top: 25px;
+
+    text-align: center;
+}
+.eventFotoImage
+{
+    max-width: 100%;
+
+    border: solid thin white;
+    -webkit-border-radius: 2.5px;
+       -moz-border-radius: 2.5px;
+            border-radius: 2.5px;
+    -webkit-box-shadow: 0 0 100px 0 rgba(0, 0, 0, .5);
+       -moz-box-shadow: 0 0 100px 0 rgba(0, 0, 0, .5);
+            box-shadow: 0 0 100px 0 rgba(0, 0, 0, .5);
+
+         -o-box-shadow: 0 0 100px 0 rgba(0, 0, 0, .5);
+}
 @media all and (max-width: 950px)
 {
     #events
