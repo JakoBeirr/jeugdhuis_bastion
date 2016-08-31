@@ -117,6 +117,21 @@
 {
     width: 100%;
 }
+.eventFotoURLDiv
+{
+    margin-top: 1px;
+    padding: 5px;
+
+    border: 1px solid black;
+    border-radius: 2.5px;
+    background-color: rgba(255, 255, 255, .95);
+}
+.eventFotoURLDiv
+{
+    text-decoration: underline;
+
+    color: rgb(50, 50, 175);
+}
 .eventFoto
 {
     margin-top: 25px;
