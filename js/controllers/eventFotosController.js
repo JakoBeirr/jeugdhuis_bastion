@@ -63,10 +63,10 @@
             }
 
             function showImage(imageIndex) {
-                activeImageIndex = imageIndex;
                 eventFotosModel.selectedImage = {};
                 eventFotosModel.selectedImage.imageDetailName = eventFotosModel.eventImages[imageIndex].name;
-                eventFotosModel.selectedImage.imageUrl = window.location.origin + "/" + urlFactory.getEventFotoUrl(eventFotosModel.eventId, btoa(eventFotosModel.eventImages[imageIndex].name));
+                eventFotosModel.selectedImage.imageUrlFull = window.location.origin + "/" + urlFactory.getEventFotoUrl(eventFotosModel.eventId, btoa(eventFotosModel.eventImages[imageIndex].name));
+                eventFotosModel.selectedImage.imageUrl = urlFactory.getEventFotoUrl(eventFotosModel.eventId, btoa(eventFotosModel.eventImages[imageIndex].name));
             }
 
             function showModal() {

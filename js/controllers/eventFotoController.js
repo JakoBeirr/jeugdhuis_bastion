@@ -23,7 +23,7 @@
                 eventFotoModel.eventId = $routeParams.eventId;
                 eventFotoModel.fotoId = $routeParams.fotoId;
 
-                if (!!eventFotoModel) {
+                if (!!eventFotoModel.fotoId) {
                     eventFotoModel.fotoName = atob(eventFotoModel.fotoId);
                 }
 
