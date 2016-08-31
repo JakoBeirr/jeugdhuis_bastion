@@ -1,0 +1,14 @@
+Dit is de data voor de fotospagina.
+Collages die hierin vermeld staan zullen getoond worden met een front_image, datum en titel op de fotospagina.
+Bij het doorklikken naar de details van deze collage wordt gebruik gemaakt van het <id>.json bestand, waar alle fotos opgelijst zullen staan.
+
+{
+  "events": [
+    {
+      "id": "Naam van de folder die de fotos bevat",
+      "title": "Titel zoals deze getoond wordt op de pagina",
+      "date": "Datum van het evenement/fotocollage (maand/dag/jaar || maand/jaar || jaar)",
+      "front_image" : "Foto die als front foto gebruikt wordt voor de collage"
+    }
+  ]
+}

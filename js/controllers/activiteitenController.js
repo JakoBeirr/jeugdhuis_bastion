@@ -36,10 +36,12 @@
 
                     for (var i = 0; i < result.upcomingevents.length; i++) {
                         var eventDate = new Date(result.upcomingevents[i].date).setHours(0, 0, 0, 0);
-                        var today = new Date().setHours(0, 0, 0, 0);
+                        var yesterday = new Date();
+                        yesterday.setDate(yesterday.getDate() - 1);
+                        yesterday.setHours(0, 0, 0, 0);
 
                         if (!!eventDate) {
-                            if (eventDate >= today) {
+                            if (eventDate >= yesterday) {
                                 activiteitenModel.upcomingEvents.push(result.upcomingevents[i]);
                             }
                         } else {

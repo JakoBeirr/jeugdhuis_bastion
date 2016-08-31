@@ -1,0 +1,12 @@
+Dit is de data voor de newsfeed op de startpagina.
+Dingen die hierin vermeld staan zullen getoond worden op de homepage in een carousel.
+
+{
+  "newsFeed": [
+    {
+      "headerTitle": "Tekst die het grootst (in witte regel over foto) getoond wordt",
+      "headerInfo": "Info tekst die iets kleiner (in zwarte regel over foto) getoond wordt",
+      "image": "Achtergrond foto"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+Dit bestand bevat alle geplande evenementen.
+Er wordt naar de datum gekeken of het evenement nog steeds gepland is en dus getoond mag worden op de pagina,
+of reeds langer dan 1 dag afgelopen is en dus niet meer getoond mag worden.
+Dit kan wel enkel als de volledige datum ingevuld is (dus maand/dag/jaar), in alle andere gevallen zal het evenement sowieso getoond worden.
+
+{
+  "upcomingevents": [
+    {
+      "title": "Naam van evenement",
+      "image": "Naam.extensie van front foto, te vinden in frontimages folder",
+      "date": "maand/dag/jaar",
+      "facebook": "URL naar facebook evenement (niet verplicht)",
+      "location": "Locatie (niet verplicht)"
+    }
+  ]
+}

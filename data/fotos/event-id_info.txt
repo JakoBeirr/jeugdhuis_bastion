@@ -1,0 +1,19 @@
+Dit bestand bevat alle fotos die getoond moeten worden in een bepaalde collage.
+
+Dit bestand kan aangemaakt worden door het oproepen van het create_event.bat bestand.
+Kijk voor informatie over dit bestand in het "create_event.info" bestand.
+
+{
+  "title": "Titel zoals deze getoond wordt op de pagina boven alle fotos in de collage",
+	"images": [
+		{
+			"name": "Foto1 in map"
+		},
+		{
+			"name": "Foto2 in map"
+		},
+		{
+			"name": "Enzovoort..."
+		}
+	]
+}

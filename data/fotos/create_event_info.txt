@@ -1,0 +1,3 @@
+!! Voor het oproepen van dit script moet je zorgen dat je een folder met een unieke naam aangemaakt hebt die alle fotos bevat. !!
+
+call create_event.bat <id | naam van de folder waarin fotos evenement zitten> <title>
