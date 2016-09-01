@@ -1,46 +1,42 @@
-(function() {
-    'use strict';
+angular.module('controllers').controller('eventFotoController', ['$http', '$routeParams', 'menuFactory',
+    function($http, $routeParams, menuFactory) {
+        var eventFotoModel = this;
 
-    angular.module('controllers').controller('eventFotoController', ['$http', '$routeParams', 'menuFactory',
-        function($http, $routeParams, menuFactory) {
-            var eventFotoModel = this;
+        menuFactory.setActivePage('fotos');
 
-            menuFactory.setActivePage('fotos');
+        initialize();
 
-            initialize();
+        /**
+         * Model functions
+         */
 
-            /**
-             * Model functions
-             */
+        /**
+         * Helper functions
+         */
 
-            /**
-             * Helper functions
-             */
+        function initialize() {
+            hideModalBackdrop();
 
-            function initialize() {
-                hideModalBackdrop();
+            eventFotoModel.eventId = $routeParams.eventId;
+            eventFotoModel.fotoId = $routeParams.fotoId;
 
-                eventFotoModel.eventId = $routeParams.eventId;
-                eventFotoModel.fotoId = $routeParams.fotoId;
-
-                if (!!eventFotoModel.fotoId) {
-                    eventFotoModel.fotoName = atob(eventFotoModel.fotoId);
-                }
-
-                getEvent();
+            if (!!eventFotoModel.fotoId) {
+                eventFotoModel.fotoName = atob(eventFotoModel.fotoId);
             }
 
-            function getEvent() {
-                $http.get("data/fotos/" + eventFotoModel.eventId + "/" + eventFotoModel.eventId + ".json", {
-                    cache: true
-                }).success(function(result) {
-                    eventFotoModel.eventTitle = result.title;
-                });
-            }
-
-            function hideModalBackdrop() {
-                $('.modal-backdrop').remove();
-            }
+            getEvent();
         }
-    ]);
-})();
+
+        function getEvent() {
+            $http.get("data/fotos/" + eventFotoModel.eventId + "/" + eventFotoModel.eventId + ".json", {
+                cache: true
+            }).success(function(result) {
+                eventFotoModel.eventTitle = result.title;
+            });
+        }
+
+        function hideModalBackdrop() {
+            $('.modal-backdrop').remove();
+        }
+    }
+]);

@@ -1,35 +1,31 @@
-(function() {
-    'use strict';
+angular.module('controllers').controller('homeController', ['$http', 'menuFactory',
+    function($http, menuFactory) {
+        var homeModel = this;
 
-    angular.module('controllers').controller('homeController', ['$http', 'menuFactory',
-        function($http, menuFactory) {
-            var homeModel = this;
+        menuFactory.setActivePage('home');
 
-            menuFactory.setActivePage('home');
+        initialize();
 
-            initialize();
+        /**
+         * Helper functions
+         */
 
-            /**
-             * Helper functions
-             */
+        function initialize() {
+            getNewsFeed();
 
-            function initialize() {
-                getNewsFeed();
-
-                hideModalBackdrop();
-            }
-
-            function getNewsFeed() {
-              $http.get("data/newsfeed/newsfeed.json", {
-                  cache: true
-              }).success(function(result) {
-                  homeModel.newsFeed = result.newsFeed;
-              });
-            }
-
-            function hideModalBackdrop() {
-                $('.modal-backdrop').remove();
-            }
+            hideModalBackdrop();
         }
-    ]);
-})();
+
+        function getNewsFeed() {
+            $http.get("data/newsfeed/newsfeed.json", {
+                cache: true
+            }).success(function(result) {
+                homeModel.newsFeed = result.newsFeed;
+            });
+        }
+
+        function hideModalBackdrop() {
+            $('.modal-backdrop').remove();
+        }
+    }
+]);

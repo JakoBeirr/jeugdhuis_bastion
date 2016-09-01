@@ -10,11 +10,7 @@
     <link rel="icon" type="image/png" href="img/favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 
-    <link href="css/index.css" rel="stylesheet">
-    <link href="css/home.css" rel="stylesheet">
-    <link href="css/activiteiten.css" rel="stylesheet">
-    <link href="css/fotos.css" rel="stylesheet">
-    <link href="css/contact.css" rel="stylesheet">
+    <link href="css/jeugdhuis_bastion.css" rel="stylesheet">
 
     <link href="vendors/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="vendors/animate/animate.css" rel="stylesheet">
@@ -30,7 +26,7 @@
 <body ng-controller="indexController as indexModel">
     <div id="wrapper" class="animated fadeIn">
         <header id="header">
-            <a id="logo" href="#"><img class="animated flipInY" src="./img/logo.png" alt="Jeugdhuis 't Bastion"></a>
+            <a id="logo" href="#/home"><img class="animated flipInY" src="./img/logo.png" alt="Jeugdhuis 't Bastion"></a>
             <nav id="menu">
                 <ul class="horizontal-menu">
                     <li><a ng-class="{active: indexModel.isActivePage('home')}" ng-href="{{indexModel.goToHome()}}">Home</a></li>
@@ -51,19 +47,7 @@
         </div>
     </div>
 
-    <script src="js/main.js"></script>
-    <script src="js/controllers/indexController.js"></script>
-    <script src="js/controllers/homeController.js"></script>
-    <script src="js/controllers/werkingController.js"></script>
-    <script src="js/controllers/lidWordenController.js"></script>
-    <script src="js/controllers/activiteitenController.js"></script>
-    <script src="js/controllers/fotosController.js"></script>
-    <script src="js/controllers/eventFotosController.js"></script>
-    <script src="js/controllers/eventFotoController.js"></script>
-    <script src="js/controllers/gastenboekController.js"></script>
-    <script src="js/controllers/contactController.js"></script>
-    <script src="js/providers/urlProvider.js"></script>
-    <script src="js/services/globalServices.js"></script>
+    <script src="js/jeugdhuis_bastion.js"></script>
 </body>
 
 </html>

@@ -1,59 +1,55 @@
-(function() {
-    'use strict';
+angular.module('controllers').controller('indexController', ['urlFactory', 'menuFactory',
+    function(urlFactory, menuFactory) {
+        var indexModel = this;
 
-    angular.module('controllers', []).controller('indexController', ['urlFactory', 'menuFactory',
-        function(urlFactory, menuFactory) {
-            var indexModel = this;
+        initialize();
 
-            initialize();
+        /**
+         * Model functions
+         */
 
-            /**
-             * Model functions
-             */
+        indexModel.goToHome = function() {
+            return urlFactory.getHomeUrl();
+        };
 
-            indexModel.goToHome = function() {
-                return urlFactory.getHomeUrl();
-            };
+        indexModel.goToWerking = function() {
+            return urlFactory.getWerkingUrl();
+        };
 
-            indexModel.goToWerking = function() {
-                return urlFactory.getWerkingUrl();
-            };
+        indexModel.goToLidWorden = function() {
+            return urlFactory.getLidWordenUrl();
+        };
 
-            indexModel.goToLidWorden = function() {
-                return urlFactory.getLidWordenUrl();
-            };
+        indexModel.goToActiviteiten = function() {
+            return urlFactory.getActiviteitenUrl();
+        };
 
-            indexModel.goToActiviteiten = function() {
-                return urlFactory.getActiviteitenUrl();
-            };
+        indexModel.goToFotos = function() {
+            return urlFactory.getFotosUrl();
+        };
 
-            indexModel.goToFotos = function() {
-                return urlFactory.getFotosUrl();
-            };
+        indexModel.goToGastenboek = function() {
+            return urlFactory.getGastenboekUrl();
+        };
 
-            indexModel.goToGastenboek = function() {
-                return urlFactory.getGastenboekUrl();
-            };
+        indexModel.goToContact = function() {
+            return urlFactory.getContactUrl();
+        };
 
-            indexModel.goToContact = function() {
-                return urlFactory.getContactUrl();
-            };
+        indexModel.isActivePage = function(page) {
+            return menuFactory.isActivePage(page);
+        };
 
-            indexModel.isActivePage = function(page) {
-                return menuFactory.isActivePage(page);
-            };
+        /**
+         * Helper functions
+         */
 
-            /**
-             * Helper functions
-             */
-
-            function initialize() {
-                hideModalBackdrop();
-            }
-
-            function hideModalBackdrop() {
-                $('.modal-backdrop').remove();
-            }
+        function initialize() {
+            hideModalBackdrop();
         }
-    ]);
-})();
+
+        function hideModalBackdrop() {
+            $('.modal-backdrop').remove();
+        }
+    }
+]);

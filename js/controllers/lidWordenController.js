@@ -1,25 +1,21 @@
-(function() {
-    'use strict';
+angular.module('controllers').controller('lidWordenController', ['menuFactory',
+    function(menuFactory) {
+        var lidWordenModel = this;
 
-    angular.module('controllers').controller('lidWordenController', ['menuFactory',
-        function(menuFactory) {
-            var lidWordenModel = this;
+        menuFactory.setActivePage('lidWorden');
 
-            menuFactory.setActivePage('lidWorden');
+        initialize();
 
-            initialize();
+        /**
+         * Helper functions
+         */
 
-            /**
-             * Helper functions
-             */
-
-            function initialize() {
-                hideModalBackdrop();
-            }
-
-            function hideModalBackdrop() {
-                $('.modal-backdrop').remove();
-            }
+        function initialize() {
+            hideModalBackdrop();
         }
-    ]);
-})();
+
+        function hideModalBackdrop() {
+            $('.modal-backdrop').remove();
+        }
+    }
+]);

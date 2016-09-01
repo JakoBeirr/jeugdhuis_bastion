@@ -1,25 +1,21 @@
-(function() {
-    'use strict';
+angular.module('controllers').controller('werkingController', ['menuFactory',
+    function(menuFactory) {
+        var werkingModel = this;
 
-    angular.module('controllers').controller('werkingController', ['menuFactory',
-        function(menuFactory) {
-            var werkingModel = this;
+        menuFactory.setActivePage('werking');
 
-            menuFactory.setActivePage('werking');
+        initialize();
 
-            initialize();
+        /**
+         * Helper functions
+         */
 
-            /**
-             * Helper functions
-             */
-
-            function initialize() {
-                hideModalBackdrop();
-            }
-
-            function hideModalBackdrop() {
-                $('.modal-backdrop').remove();
-            }
+        function initialize() {
+            hideModalBackdrop();
         }
-    ]);
-})();
+
+        function hideModalBackdrop() {
+            $('.modal-backdrop').remove();
+        }
+    }
+]);

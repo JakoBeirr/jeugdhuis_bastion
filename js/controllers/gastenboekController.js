@@ -1,25 +1,21 @@
-(function() {
-    'use strict';
+angular.module('controllers').controller('gastenboekController', ['menuFactory',
+    function(menuFactory) {
+        var gastenboekModel = this;
 
-    angular.module('controllers').controller('gastenboekController', ['menuFactory',
-        function(menuFactory) {
-            var gastenboekModel = this;
+        menuFactory.setActivePage('gastenboek');
 
-            menuFactory.setActivePage('gastenboek');
+        initialize();
 
-            initialize();
+        /**
+         * Helper functions
+         */
 
-            /**
-             * Helper functions
-             */
-
-            function initialize() {
-                hideModalBackdrop();
-            }
-
-            function hideModalBackdrop() {
-                $('.modal-backdrop').remove();
-            }
+        function initialize() {
+            hideModalBackdrop();
         }
-    ]);
-})();
+
+        function hideModalBackdrop() {
+            $('.modal-backdrop').remove();
+        }
+    }
+]);

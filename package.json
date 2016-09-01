@@ -1,0 +1,25 @@
+{
+  "name": "jeugdhuis_bastion",
+  "version": "1.0.0",
+  "description": "Website voor Jeugdhuis van Brecht - 't Bastion",
+  "main": "Gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-css": "^0.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakoBeirr/jeugdhuis_bastion.git"
+  },
+  "keywords": [],
+  "author": "Jeroen Jansen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JakoBeirr/jeugdhuis_bastion/issues"
+  },
+  "homepage": "https://github.com/JakoBeirr/jeugdhuis_bastion#readme"
+}
