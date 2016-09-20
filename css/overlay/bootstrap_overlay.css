@@ -1,3 +1,11 @@
+body
+{
+    font-family: Roboto, sans-serif;
+    font-size: 1.4em;
+    font-style: normal;
+    line-height: 1.4;
+}
+
 .nav-tabs {
   border-bottom: 1px solid #5c3219;
 }

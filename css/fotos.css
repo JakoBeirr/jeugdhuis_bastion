@@ -11,6 +11,9 @@
     text-align: center;
     vertical-align: text-top;
 }
+.event > a, .event > a:hover, .event > a:focus {
+    text-decoration: none;
+}
 .eventWidth
 {
     width: 150px;
@@ -45,8 +48,6 @@
 .eventDate
 {
     font-size: .9em;
-
-    word-spacing: -7px;
 
     color: #9b8a76;
 }

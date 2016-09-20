@@ -8,15 +8,17 @@
         <div><img ng-if="upcomingEvent.image" class="upcomingEventImage" ng-src="{{'data/activiteiten/frontimages/' + upcomingEvent.image}}" alt="Voorbeeld foto" onerror="this.src='img/default-image.jpg'"><img ng-if="!upcomingEvent.image" class="upcomingEventImage" src="img/default-image.jpg" alt="Voorbeeld foto"></div>
         <div class="clear"></div>
         <p>
-            <span ng-if="activiteitenModel.getDate(upcomingEvent.date)" class="upcomingEventInfo glyphicon glyphicon-calendar" aria-hidden="true">
-                <span ng-bind="activiteitenModel.getDate(upcomingEvent.date)"></span>
+            <span ng-if="activiteitenModel.getDate(upcomingEvent.date)" class="upcomingEventInfo">
+                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                <span ng-bind="activiteitenModel.getDate(upcomingEvent.date)" style="margin-left: 5px;"></span>
             </span>
-            <a ng-if="upcomingEvent.facebook" ng-href="{{upcomingEvent.facebook}}">
+            <a ng-if="upcomingEvent.facebook" ng-href="{{upcomingEvent.facebook}}" style="margin-left: 10px;">
                 <span class="facebook-sign"></span>
             </a>
         </p>
         <p class="upcomingEventInfo">
-            <span ng-if="upcomingEvent.location" class="glyphicon glyphicon-map-marker" aria-hidden="true">
+            <span ng-if="upcomingEvent.location">
+                <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
                 <span ng-bind="upcomingEvent.location"></span>
             </span>
         </p>

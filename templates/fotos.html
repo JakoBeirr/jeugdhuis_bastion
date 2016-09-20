@@ -12,9 +12,8 @@
             <span class="eventWidth eventTitle" ng-bind="event.title"></span>
             <div class="clear"></div>
             <span class="eventDate" ng-if="fotosModel.getDate(event.date)">
-                <span class="glyphicon glyphicon-calendar" aria-hidden="true">
-                    <span ng-bind="fotosModel.getDate(event.date)"></span>
-                </span>
+                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                <span ng-bind="fotosModel.getDate(event.date)" style="margin-left: 5px;"></span>
             </span>
         </a>
     </div>
