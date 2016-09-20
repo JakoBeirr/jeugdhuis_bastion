@@ -1,0 +1,17 @@
+.nav-tabs {
+  border-bottom: 1px solid #5c3219;
+}
+
+.nav-tabs > li.active > a {
+  background-color: rgba(233, 209, 175, .85);
+  border: 1px solid #5c3219;
+}
+
+.nav-tabs > li > a:hover, .nav-tabs > li > a:focus, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  background-color: rgb(233, 209, 175);
+  border: 1px solid #5c3219;
+}
+
+.nav-tabs > li > a {
+  color: #5c3219;
+}
