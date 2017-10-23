@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <h4 class="pageTitle" ng-bind="eventFotoModel.eventTitle"></h4>
 
-<div class="eventFoto">
-    <img ng-if="eventFotoModel.fotoId" class="eventFotoImage" ng-src="{{'data/fotos/' + eventFotoModel.eventId + '/' + eventFotoModel.fotoName}}" alt="foto" onerror="this.src='img/default-image.jpg'">
-    <img ng-if="!eventFotoModel.fotoId" class="eventFotoImage" src="img/default-image.jpg" alt="foto">
+<div id="activiteitFoto">
+    <img ng-if="eventFotoModel.fotoId" class="foto" ng-src="{{'data/fotos/' + eventFotoModel.eventId + '/' + eventFotoModel.fotoName}}" alt="foto" onerror="this.src='img/default-image.jpg'">
+    <img ng-if="!eventFotoModel.fotoId" class="eventfotofFotoImage" src="img/default-image.jpg" alt="foto">
 </div>

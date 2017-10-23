@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="img/favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet" type="text/css">
 
-    <link href="css/jeugdhuis_bastion.css" rel="stylesheet">
+    <link href="css/jeugdhuis_bastion.min.css" rel="stylesheet">
 
     <link href="vendors/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="vendors/animate/animate.css" rel="stylesheet">
@@ -33,10 +33,10 @@
                 <ul class="horizontal-menu">
                     <li><a ng-class="{active: indexModel.isActivePage('home')}" ng-href="{{indexModel.goToHome()}}">Home</a></li>
                     <li><a ng-class="{active: indexModel.isActivePage('werking')}" ng-href="{{indexModel.goToWerking()}}">Werking</a></li>
-                    <li><a ng-class="{active: indexModel.isActivePage('lidWorden')}" ng-href="{{indexModel.goToLidWorden()}}">Lid worden</a></li>
+                    <!--<li><a ng-class="{active: indexModel.isActivePage('lidWorden')}" ng-href="{{indexModel.goToLidWorden()}}">Lid worden</a></li>-->
                     <li><a ng-class="{active: indexModel.isActivePage('activiteiten')}" ng-href="{{indexModel.goToActiviteiten()}}">Activiteiten</a></li>
                     <li><a ng-class="{active: indexModel.isActivePage('fotos')}" ng-href="{{indexModel.goToFotos()}}">Foto's</a></li>
-                    <li><a ng-class="{active: indexModel.isActivePage('gastenboek')}" ng-href="{{indexModel.goToGastenboek()}}">Gastenboek</a></li>
+                    <!--<li><a ng-class="{active: indexModel.isActivePage('gastenboek')}" ng-href="{{indexModel.goToGastenboek()}}">Gastenboek</a></li>-->
                     <li><a ng-class="{active: indexModel.isActivePage('contact')}" ng-href="{{indexModel.goToContact()}}">Contact</a></li>
                 </ul>
             </nav>
@@ -49,7 +49,7 @@
         </div>
     </div>
 
-    <script src="js/jeugdhuis_bastion.js"></script>
+    <script src="js/jeugdhuis_bastion.min.js"></script>
 </body>
 
 </html>

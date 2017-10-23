@@ -67,12 +67,12 @@ angular.module('controllers').controller('eventFotosController', ['$http', '$rou
         }
 
         function showModal() {
-            $('#imageDetailModal').modal('show');
+            $('#activiteitFotoModal').modal('show');
             hideModalBackdrop();
         }
 
         function hideModal() {
-            $('#imageDetailModal').modal('hide');
+            $('#activiteitFotoModal').modal('hide');
         }
 
         function hideModalBackdrop() {

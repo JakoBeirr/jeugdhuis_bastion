@@ -1,4 +1,4 @@
-.upcomingEvent
+#aankomendeActiviteiten > .activiteit
 {
     display: inline-block;
 
@@ -6,17 +6,16 @@
     margin-top: 20px;
     margin-right: 25px;
     margin-left: 25px;
+
     vertical-align: text-top;
 }
-
-.upcomingEventTitle
+#aankomendeActiviteiten > .activiteit > .title
 {
     font-size: 18px;
     font-weight: 500;
     font-style: normal;
 }
-
-.upcomingEventImage
+#aankomendeActiviteiten > .activiteit > .fotoWrapper > .foto
 {
     width: 200px;
     height: 200px;
@@ -31,8 +30,42 @@
 
          -o-box-shadow: 0 0 20px 0 rgba(50, 50, 50, .5);
 }
+#aankomendeActiviteiten > .activiteit > .datumInfo
+{
+    float: left;
 
-.upcomingEventInfo
+    font-size: 15px;
+
+    width: 170px;
+    height: 20px;
+    margin-top: 10px;
+
+    text-align: left;
+
+    color: #9b8a76;
+}
+#aankomendeActiviteiten > .activiteit > .sociaal
+{
+    float: left;
+    margin-left: 10px;
+}
+#aankomendeActiviteiten > .activiteit > .sociaal > .facebook
+{
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+
+    cursor: pointer;
+
+    background-image: url('../img/bookface-logo.png');
+}
+#aankomendeActiviteiten > .activiteit > .sociaal > .facebook:hover
+{
+    background-image: url('../img/bookface-logo-hover.png');
+}
+#aankomendeActiviteiten > .activiteit > .locatieInfo
 {
     font-size: 15px;
 
@@ -45,34 +78,11 @@
     color: #9b8a76;
 }
 
-.facebook-sign
-{
-    display: inline-block;
-
-    width: 20px;
-    height: 20px;
-    margin-top: 10px;
-
-    cursor: pointer;
-
-    background-image: url('../img/facebook.png');
-}
-
-.facebook-sign:hover
-{
-    background-image: url('../img/facebook-hover.png');
-}
-
 @media all and (max-width: 950px)
 {
-    #upcomingEvents
+    #aankomendeActiviteiten
     {
         text-align: center;
-    }
-
-    .upcomingEventDate
-    {
-        text-align: left;
     }
 }
 
@@ -131,11 +141,12 @@
     }
 }
 
-.event
+#activiteiten > .activiteit
 {
     display: inline-block;
 
     width: 150px;
+    height: 180px;
     margin-top: 20px;
     margin-right: 15px;
     margin-left: 15px;
@@ -144,21 +155,13 @@
     text-align: center;
     vertical-align: text-top;
 }
-.event > a, .event > a:hover, .event > a:focus {
+#activiteiten > .activiteit > .link > a,
+.activiteit > .link > a:hover,
+.activiteit > .link > a:focus
+{
     text-decoration: none;
 }
-.eventWidth
-{
-    width: 150px;
-}
-.eventFrontImage
-{
-    border: double whitesmoke;
-    -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-            border-radius: 5px;
-}
-.frontImage
+#activiteiten > .activiteit > .link > .fotoWrapper
 {
     width: 100%;
     height: 150px;
@@ -172,23 +175,36 @@
 
          -o-box-shadow: 0 0 20px 0 rgba(50, 50, 50, .25);
 }
-.eventTitle
+#activiteiten > .activiteit > .link > .fotoWrapper > .foto
+{
+    width: 100%;
+    height: 100%;
+
+    border: double whitesmoke;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+}
+#activiteiten > .activiteit > .link > .title
 {
     font-size: .9em;
 
+    width: 100%;
     height: 30px;
 }
-.eventDate
+#activiteiten > .activiteit > .link > .date
 {
     font-size: .9em;
 
     color: #9b8a76;
 }
-.eventImage
+
+#activiteitFotos > .link
 {
     display: inline-block;
 
     width: 150px;
+    height: 180px;
     margin-top: 20px;
     margin-right: 15px;
     margin-left: 15px;
@@ -196,20 +212,19 @@
     cursor: pointer;
     text-align: center;
 }
-.eventImageWidth
+#activiteitFotos > .link > .fotoWrapper
 {
-    width: 150px;
-}
-.imageImage
-{
+    width: 100%;
+    height: 150px;
+
     -webkit-border-radius: 5px;
        -moz-border-radius: 5px;
             border-radius: 5px;
 }
-.image
+#activiteitFotos > .link > .fotoWrapper > .foto
 {
     width: 100%;
-    height: 150px;
+    height: 100%;
 
     -webkit-border-radius: 5px;
        -moz-border-radius: 5px;
@@ -220,15 +235,18 @@
 
          -o-box-shadow: 0 0 20px 0 rgba(50, 50, 50, .25);
 }
-.imageName
+#activiteitFotos > .link > .name
 {
+    height: 30px;
+
     color: #9b8a76;
 }
-#imageDetailModal
+
+#activiteitFotoModal
 {
     width: 100%;
 }
-#imageDetailModalBody
+#activiteitFotoModalBody
 {
     padding: 0;
 
@@ -239,7 +257,7 @@
 
          -o-box-shadow: 0 0 100px 0 rgba(0, 0, 0, .5);
 }
-#imageDetailClose
+#activiteitFotoModalBody > .close
 {
     position: absolute;
     top: 10px;
@@ -247,11 +265,21 @@
 
     color: rgba(255, 255, 255, .7);
 }
-.imageDetailImage
+#activiteitFotoModalBody > .activiteitFoto
 {
     width: 100%;
 }
-.eventFoto
+#activiteitFotoModalFooter > .url
+{
+    margin-top: 2.5px;
+    padding: 5px;
+
+    border: 1px solid black;
+    border-radius: 2.5px;
+    background-color: rgba(255, 255, 255, .95);
+}
+
+#activiteitFoto
 {
     position: relative;
 
@@ -259,15 +287,7 @@
 
     text-align: center;
 }
-.eventFotoURL
-{
-    margin-top: 2.5px;
-
-    border: 1px solid black;
-    border-radius: 2.5px;
-    background-color: rgba(255, 255, 255, .95);
-}
-.eventFotoImage
+#activiteitFoto > .foto
 {
     max-width: 100%;
     max-height: 450px;
@@ -282,13 +302,15 @@
 
          -o-box-shadow: 0 0 100px 0 rgba(0, 0, 0, .5);
 }
+
 @media all and (max-width: 950px)
 {
-    #events
+    #activiteiten
     {
         text-align: center;
     }
-    #images
+
+    #activiteitFotos
     {
         text-align: center;
     }
@@ -526,4 +548,43 @@ a
     {
         margin-top: 10px;
     }
+}
+
+#bestuursleden
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#bestuursleden > .bestuurslid
+{
+    display: inline-block;
+
+    width: 120px;
+    height: 190px;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    text-align: center;
+    vertical-align: text-top;
+}
+#bestuursleden > .bestuurslid > .fotoWrapper
+{
+    width: 100%;
+    height: 130px;
+    margin-bottom: 10px;
+}
+#bestuursleden > .bestuurslid > .fotoWrapper > .foto
+{
+    width: 100%;
+    max-height: 100%;
+    border: thin whitesmoke;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+}
+#bestuursleden > .bestuurslid > .naam
+{
+    width: 100%;
+    height: 50px;
 }
