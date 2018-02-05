@@ -2,7 +2,7 @@
 {
     display: inline-block;
 
-    width: 200px;
+    width: 300px;
     margin-top: 20px;
     margin-right: 25px;
     margin-left: 25px;
@@ -17,7 +17,8 @@
 }
 #aankomendeActiviteiten > .activiteit > .fotoWrapper > .foto
 {
-    width: 200px;
+    width: 100%;
+    min-width: 300px;
     height: 200px;
     margin-top: 5px;
 
@@ -36,7 +37,8 @@
 
     font-size: 15px;
 
-    width: 170px;
+    width: 90%;
+    min-width: 270px;
     height: 20px;
     margin-top: 10px;
 
@@ -69,7 +71,8 @@
 {
     font-size: 15px;
 
-    width: 170px;
+    width: 90%;
+    min-width: 270px;
     height: 20px;
     margin-top: 10px;
 

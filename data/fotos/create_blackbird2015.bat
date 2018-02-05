@@ -1,1 +1,1 @@
-call create_event.bat "blackbird2015" "Blackbird Festival 2015"
+call create_event.bat "blackbird2015" "BlackBird Festival 2015"

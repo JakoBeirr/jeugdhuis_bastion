@@ -1,16 +1,16 @@
 <?php
 
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
-header('Content-Type: application/json');
+$_POST = json_decode(file_get_contents('php://input'), true);
 
-$array = json_decode(file_get_contents('php://input'), true);
-$email = $array['email'];
-$subject = $array['subject'];
-$message = $array['message'];
 $to = "Jansen.Jeroen@hotmail.com";
+$subject = "[CONTACT WEBSITE] " . $_POST['subject'];
+$message = $_POST['message'];
+$headers = "From: " . $_POST['from'];
 
-mail ($to, $subject, $message, "From: $email");
-echo "Your message has been sent";
+$mailSent = mail($to, $subject, $message, $headers);
+
+if (!$mailSent) {
+  die('Mail kon niet verzonden worden');
+}
 
 ?>

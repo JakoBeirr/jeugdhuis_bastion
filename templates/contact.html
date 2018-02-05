@@ -9,15 +9,24 @@
         </p>
         <p>
             <strong>Adres:</strong>
-            Ambachtslaan 10, 2960 Brecht
+            Ambachtslaan 12, 2960 Brecht
+        </p>
+        <p>
+            <strong>Openingsuren:</strong>
+        </p>
+        <p style="margin-left: 25px;">
+            Iedere vrijdag van 21u00 tot 03u00
         </p>
         <div class="form-group contactForm">
             <strong>Contacteer ons</strong>
 
+            <input type="text" class="form-control" ng-model="contactModel.mailForm.from" placeholder="Van" name="from" style="margin: 5px 0px 5px 0px"/>
             <input type="text" class="form-control" ng-model="contactModel.mailForm.subject" placeholder="Onderwerp" name="subject" style="margin: 5px 0px 5px 0px"/>
             <textarea type="text" class="form-control" rows="5" ng-model="contactModel.mailForm.message" placeholder="Bericht" name="comment" style="margin: 5px 0px 5px 0px"/>
 
             <button type="button" class="btn btn-primary" name="sendMailButton" ng-click="contactModel.sendMail()" style="float: right;">Verstuur</button>
+
+            <!--tonen op scherm van melding-->
         </div>
     </div>
 
@@ -44,5 +53,5 @@
             });
         }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyATfI5hoiILiQfnW6Qb70twA5P-idn0rWk&callback=initMap" async defer></script>
 </div>

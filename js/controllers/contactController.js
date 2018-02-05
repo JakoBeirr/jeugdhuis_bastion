@@ -11,6 +11,7 @@ angular.module('controllers').controller('contactController', ['$http', 'menuFac
          */
 
         contactModel.sendMail = function() {
+            var from = contactModel.mailForm.from;
             var subject = contactModel.mailForm.subject;
             var body = contactModel.mailForm.message;
             if (!!body) {
@@ -23,15 +24,15 @@ angular.module('controllers').controller('contactController', ['$http', 'menuFac
             clickEvent.initEvent("click", true, true);
             a.dispatchEvent(clickEvent);
 
-            /*$http.post('php/sendMail.php', JSON.stringify(contactModel.mailModel))
-                .success(
-                    function(data) {
-                        alert('Mail sent!');
-                    })
-                .error(
-                    function(data) {
-                        alert('Unable to sent mail!');
-                    });*/
+            /*$http.post('php/sendMail.php', JSON.stringify(contactModel.mailForm))
+                .success(function(data) {
+                  contactModel.mailForm.from = '';
+                  contactModel.mailForm.subject = '';
+                  contactModel.mailForm.message = '';
+                  //tonen op scherm
+                }).error(function(data) {
+                  //tonen op scherm
+                });*/
         };
 
         /**
@@ -46,8 +47,12 @@ angular.module('controllers').controller('contactController', ['$http', 'menuFac
 
         function createMailModel() {
             contactModel.mailForm = {};
+            contactModel.mailForm.from = '';
             contactModel.mailForm.subject = '';
             contactModel.mailForm.message = '';
+
+            contactModel.mailForm.showAlert = false;
+            contactModel.mailForm.alert = {};
         }
 
         function hideModalBackdrop() {

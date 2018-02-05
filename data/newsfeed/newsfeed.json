@@ -2,13 +2,18 @@
   "newsFeed": [
     {
       "headerTitle": "Werken jeugdhuis gestart",
-      "headerInfo": "Eind augustus zijn we gestart met de werken aan het nieuwe jeugdhuis",
+      "headerInfo": "Eind augustus zijn we gestart met de werken aan het nieuwe Jeugdhuis 't Bastion",
       "image": "start_werken_jeugdhuis.jpg"
     },
     {
       "headerTitle": "tbastionjh",
-      "headerInfo": "Sinds kort kan u ons ook volgen via Snapchat",
+      "headerInfo": "U kan ons nu ook volgen via Snapchat",
       "image": "snapchat.png"
+    },
+    {
+      "headerTitle": "Opening jeugdhuis",
+      "headerInfo": "Vrijdag 23 februari officiële opening van het Jeugdhuis 't Bastion",
+      "image": "opening_jeugdhuis.jpg"
     }
   ]
 }

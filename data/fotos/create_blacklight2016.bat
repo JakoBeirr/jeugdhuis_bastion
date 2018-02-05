@@ -1,1 +1,0 @@
-call create_event.bat "blacklight2016" "Blacklight Volleybaltoernooi 2016"

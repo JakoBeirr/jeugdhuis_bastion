@@ -1,17 +1,18 @@
 {
   "upcomingevents": [
     {
-      "title": "Blackbird Festival 2016",
-      "image": "blackbird_frontimage.jpg",
-      "date": "08/27/2016",
-      "location": "Schippersdreef, 2960 Brecht",
-      "facebook": "https://www.facebook.com/events/879890882117357/"
+      "title": "Jeugdhousewarming 't Bastion",
+      "image": "jeugdhousewarming.jpg",
+      "date": "02/23/2018",
+      "location": "Ambachtslaan 12, 2960 Brecht",
+      "facebook": "https://www.facebook.com/events/1538091576289561/"
     },
     {
-      "title": "Fifa Toernooi 2016",
-      "image": "fifatoernooi_frontimage.png",
-      "date": "05/2016",
-      "facebook": "https://www.facebook.com/events/218415288503464/"
+      "title": "Wheel Of Fortune",
+      "image": "wheeloffortune.png",
+      "date": "02/24/2018",
+      "location": "Ambachtslaan 12, 2960 Brecht",
+      "facebook": "https://www.facebook.com/events/533831910312063/"
     }
   ]
 }
