@@ -1,11 +1,11 @@
 <?php
 
-$_POST = json_decode(file_get_contents('php://input'), true);
-
-$to = "Jansen.Jeroen@hotmail.com";
-$subject = "[CONTACT WEBSITE] " . $_POST['subject'];
-$message = $_POST['message'];
-$headers = "From: " . $_POST['from'];
+$to      = 'jansen.jeroen@hotmail.com';
+$subject = 'the subject';
+$message = 'hello';
+$headers = 'From: webmaster@example.com' . "\r\n" .
+    'Reply-To: webmaster@example.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
 
 $mailSent = mail($to, $subject, $message, $headers);
 

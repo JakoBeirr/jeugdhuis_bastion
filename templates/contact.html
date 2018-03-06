@@ -13,14 +13,14 @@
         </p>
         <p>
             <strong>Openingsuren:</strong>
-			Iedere vrijdag van 21u00 tot 03u00
+			Iedere vrijdag van 20u30 tot 03u00
         </p>
         <div class="form-group contactForm">
             <strong>Contacteer ons</strong>
 
             <input type="text" class="form-control" ng-model="contactModel.mailForm.from" placeholder="Van" name="from" style="margin: 5px 0px 5px 0px"/>
             <input type="text" class="form-control" ng-model="contactModel.mailForm.subject" placeholder="Onderwerp" name="subject" style="margin: 5px 0px 5px 0px"/>
-            <textarea type="text" class="form-control" rows="5" ng-model="contactModel.mailForm.message" placeholder="Bericht" name="comment" style="margin: 5px 0px 5px 0px"/>
+            <textarea class="form-control" rows="5" ng-model="contactModel.mailForm.message" placeholder="Bericht" name="comment" style="margin: 5px 0px 5px 0px"></textarea>
 
             <button type="button" class="btn btn-primary" name="sendMailButton" ng-click="contactModel.sendMail()" style="float: right;">Verstuur</button>
 
