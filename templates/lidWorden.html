@@ -3,16 +3,20 @@
     <h4 class="pageTitle">Lid Worden</h4>
 
     <div class="form-group contactForm">
-        <strong style="margin: 5px 0px 5px 0px">Gegevens invullen</strong>
-
-        <input required type="text" class="form-control" ng-model="lidWordenModel.lidData.name" placeholder="Naam" name="name" style="margin: 5px 0px 5px 0px"/>
-        <input required type="date" class="form-control" ng-model="lidWordenModel.lidData.dateOfBirth" placeholder="" name="dateOfBirth" style="margin: 5px 0px 5px 0px"/>
-        <input required type="tel" class="form-control" ng-model="lidWordenModel.lidData.gsm" placeholder="Gsm nummer" name="gsm" style="margin: 5px 0px 5px 0px"/>
-        <input required type="email" class="form-control" ng-model="lidWordenModel.lidData.mail" placeholder="E-mail adres" name="mail" style="margin: 5px 0px 5px 0px"/>
-        <input type="radio" ng-model="lidWordenModel.lidData.form" name="form" value="Actief lid" style="margin: 5px 0px 5px 0px"> Actief lid<br>
-        <input type="radio" ng-model="lidWordenModel.lidData.form" name="form" value="Werkgroep lid" style="margin: 5px 0px 5px 0px"> Werkgroep lid<br>
-        <input type="radio" ng-model="lidWordenModel.lidData.form" name="form" value="Sympathisant" style="margin: 5px 0px 5px 0px"> Sympathisant
-        <textarea class="form-control" rows="5" ng-model="lidWordenModel.lidData.comment" placeholder="Eventuele motivatie" name="comment" style="margin: 5px 0px 5px 0px"></textarea>
+        <label style="margin: 5px 0px 5px 0px">Naam:</label>
+        <input type="text" class="form-control" ng-model="lidWordenModel.lidData.name" name="name"/>
+        <label style="margin: 5px 0px 5px 0px">Geboortedatum:</label>
+        <input type="date" class="form-control" ng-model="lidWordenModel.lidData.dateOfBirth" name="dateOfBirth"/>
+        <label style="margin: 5px 0px 5px 0px">GSM:</label>
+        <input type="tel" class="form-control" ng-model="lidWordenModel.lidData.gsm" name="gsm"/>
+        <label style="margin: 5px 0px 5px 0px">E-mail adres:</label>
+        <input type="email" class="form-control" ng-model="lidWordenModel.lidData.mail" name="mail"/>
+        <label style="margin: 5px 0px 5px 0px">Vorm:</label><br>
+        <input type="radio" ng-model="lidWordenModel.lidData.form" name="form" value="Actief lid"> Actief lid<br>
+        <input type="radio" ng-model="lidWordenModel.lidData.form" name="form" value="Werkgroep lid"> Werkgroep lid<br>
+        <input type="radio" ng-model="lidWordenModel.lidData.form" name="form" value="Sympathisant"> Sympathisant<br>
+        <label style="margin: 5px 0px 5px 0px">Eventuele motivatie:</label>
+        <textarea class="form-control" rows="5" ng-model="lidWordenModel.lidData.comment" name="comment"></textarea>
 
         <button type="button" class="btn btn-primary" name="sendMailButton" ng-click="lidWordenModel.sendMail()" style="float: right;">Verstuur</button>
     </div>
